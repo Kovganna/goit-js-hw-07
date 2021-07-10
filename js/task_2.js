@@ -14,74 +14,11 @@ const ingredients = [
 ];
 // Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, после чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй document.createElement().
 
-const itemFirstEl = document.createElement('li');
-itemEl.classList.add('list-item');
-itemEl.textContent ='Картошка';
-console.log(itemEl);
-
-document.body.appendChild(itemEl);
-const itemEl = document.createElement('li');
-itemEl.classList.add('list-item');
-itemEl.textContent = [
-    'Картошка',
-    'Грибы',
-    'Чеснок',
-    'Помидоры',
-    'Зелень',
-    'Приправы',
-  ];
-console.log(itemEl);
-
-document.body.appendChild(itemEl);
-const itemEl = document.createElement('li');
-itemEl.classList.add('list-item');
-itemEl.textContent = [
-    'Картошка',
-    'Грибы',
-    'Чеснок',
-    'Помидоры',
-    'Зелень',
-    'Приправы',
-  ];
-console.log(itemEl);
-
-document.body.appendChild(itemEl);
-const itemEl = document.createElement('li');
-itemEl.classList.add('list-item');
-itemEl.textContent = [
-    'Картошка',
-    'Грибы',
-    'Чеснок',
-    'Помидоры',
-    'Зелень',
-    'Приправы',
-  ];
-console.log(itemEl);
-
-document.body.appendChild(itemEl);
-const itemEl = document.createElement('li');
-itemEl.classList.add('list-item');
-itemEl.textContent = [
-    'Картошка',
-    'Грибы',
-    'Чеснок',
-    'Помидоры',
-    'Зелень',
-    'Приправы',
-  ];
-console.log(itemEl);
-
-document.body.appendChild(itemEl);
-const itemEl = document.createElement('li');
-itemEl.classList.add('list-item');
-itemEl.textContent = [
-    'Картошка',
-    'Грибы',
-    'Чеснок',
-    'Помидоры',
-    'Зелень',
-    'Приправы',
-  ];
-console.log(itemEl);
-
-document.body.appendChild(itemEl);
+const listEl = document.querySelector(`#ingredients`);
+let itemEl = new DocumentFragment();
+for (let i = 0; i < 6; i++) {
+  const li = document.createElement('li');
+  li.textContent = ingredients[i];
+  itemEl.appendChild(li);
+}
+document.querySelector('#ingredients').append(itemEl);
