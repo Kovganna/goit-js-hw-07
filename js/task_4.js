@@ -9,3 +9,29 @@
 //   <span id="value">0</span>
 //   <button type="button" data-action="increment">+1</button>
 // </div>
+
+const buttonClick = {
+    sub: document.querySelector('[data-action="decrement"]'),
+    add: document.querySelector('[data-action="increment"]'),
+    span: document.querySelector('#value'),
+    wrapper: document.querySelector('#counter'),
+};
+
+let counterValue = [];
+
+
+const increment = () => {
+    counterValue = Number(counterValue) + 1;
+    document.getElementById('value').textContent = counterValue;
+}
+
+const decrement = () => {
+    if(Number(counterValue)>0){
+    counterValue = Number(counterValue) - 1;
+    document.getElementById('value').textContent = counterValue;
+    }
+}
+
+
+buttonClick.add.addEventListener('click', increment);
+buttonClick.sub.addEventListener('click', decrement);
