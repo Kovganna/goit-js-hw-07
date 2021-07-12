@@ -3,3 +3,23 @@
 
 // <input type="text" placeholder="Ваше имя?" id="name-input" />
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+
+const ref = {
+input: document.querySelector('#name-input'),
+output: document.querySelector('#name-output'),
+}
+
+ref.input.addEventListener('input', onInputChange);
+
+function onInputChange(event){
+    if( ref.output.textContent = event.currentTarget.value) {
+       
+        console.log(event.currentTarget.value)
+    }
+    else {
+        ref.output.textContent = `Незнакомец`; 
+    };
+
+    
+}
+console.log(ref.input.value);
