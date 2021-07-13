@@ -4,3 +4,12 @@
 // <input id="font-size-control" type="range" />
 // <br />
 // <span id="text">Абракадабра!</span>
+
+const refs={
+input: document.getElementById('font-size-control'),
+span: document.getElementById('text'),
+}
+refs.input.addEventListener('input', changeInputRange);
+function changeInputRange(event) {
+    refs.span.style.fontSize = event.currentTarget.value + 'px';
+}   

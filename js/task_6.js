@@ -25,6 +25,7 @@
 
 
 document.getElementById('validation-input').onblur = function() {
+    console.log(this.value.length);
     if(this.getAttribute('data-length') > this.value.length) {
         this.classList.remove('valid');
         this.classList.add('invalid');
@@ -33,5 +34,6 @@ document.getElementById('validation-input').onblur = function() {
         this.classList.remove('invalid');
         this.classList.add('valid');
     }
+        
 }
 
