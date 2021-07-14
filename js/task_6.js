@@ -22,6 +22,7 @@
 // #validation-input.invalid {
 //   border-color: #f44336;
 // }
+// 
 
 
 document.getElementById('validation-input').onblur = function() {
