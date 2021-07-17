@@ -25,19 +25,22 @@ const images = [
 
 
 
-const imgEl = document.querySelector(`#gallery`);
+const imgGallery = document.querySelector(`#gallery`);
 
-images.forEach(image => {
-    imgEl.insertAdjacentHTML(
-        'afterbegin',
-        `<li>
-        <img 
-            class = "img"
-            src = "${image.url}" 
-            alt = "${image.alt}"
-            width = "270">,
-        </li>`
-    );
+const addImgGallery = images.map(el => {
   
+  const addImgGalleryItem = 
+  `<li  class = "gallery-item">
+  <img src = "${el.url}" 
+  alt= "${el.alt}"
+  height = 150
+  width = 270>
+  </li>`;
+  
+  return addImgGalleryItem;
 });
-imgEl.setAttribute("style", "list-style-type:none; display: flex-box;");
+imgGallery.insertAdjacentHTML("beforeend", addImgGallery.join(''));
+  
+imgGallery.setAttribute("style", "list-style-type:none; display: flex-box;");
+
+  
