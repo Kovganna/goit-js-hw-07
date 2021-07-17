@@ -26,10 +26,8 @@ const increment = () => {
 }
 
 const decrement = () => {
-    if(Number(counterValue)>0){
     counterValue = Number(counterValue) - 1;
     document.getElementById('value').textContent = counterValue;
-    }
 }
 
 
